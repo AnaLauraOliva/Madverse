@@ -20,10 +20,15 @@ Madverse será un motor genérico en SWI-Prolog que permitirá definir, guardar,
 - save_universe/1
 - load_universe/1 (lee un archivo .pl del disco)
 - activate/1 (marca cual de los universos ya cargados en memoria es el que el menú va a usar ahora)
-- define_(property|role|group|relationship)/N
+- list_universes/1
+- define_property/3
+- define_role/2
+- define_group/2
+- define_relationship/2
 - add_character/2
 - assign_group/3
 - assign_role/3
+- add_property_value/4
 - register_relationship/4
 - las consultas (irán en un archivo queries.pl aparte).
 
@@ -44,7 +49,7 @@ Por ahora se definen las siguientes consultas:
 - Las propiedades son de un solo tipo
 - Las relaciones son simétricas
 - Un personaje puede pertenecer a varios grupos
-- Por ahora solo se puede agregar y borrar
+- Por ahora solo se puede agregar
 - Todo el código estará en inglés y se usará snake_case, sin embargo, las descripciones y documentación estarán en español.
 - Los nombres se normalizan a minúsculas con guiones bajos.
 - Cada universo es un archivo nombre.pl en una carpeta universos.
